@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список задач | TaskMaster</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+    <div class="menu-overlay"></div>
+    <header class="header">
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="projects.html">Проекты</a></li>
+                <li><a href="tasks.html" class="active">Список задач</a></li>
+                <li><a href="about.html">О приложении</a></li>
+            </ul>
+            <div class="burger-menu">
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="tasks-header">
+            <h1>Список задач</h1>
+            <button onclick="openModal()">Добавить задачу</button>
+        </div>
+        <div id="tasksList" class="tasks-list">
+            <!-- Tasks will be loaded here dynamically -->
+        </div>
+    </main>
+
+    <dialog id="taskModal">
+        <h2>Добавить новую задачу</h2>
+        <form id="taskForm" method="dialog">
+            <label for="taskName">Название задачи:</label>
+            <input type="text" id="taskName" required>
+            <label for="taskDescription">Описание:</label>
+            <textarea id="taskDescription" required></textarea>
+            <div class="form-buttons">
+                <button type="submit">Добавить</button>
+                <button type="button" onclick="closeModal()">Отмена</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
